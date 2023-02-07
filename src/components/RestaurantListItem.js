@@ -5,7 +5,7 @@ export const RestaurantListItem = ({ name, rating, image_url }) => {
         {name}
         {Array(Math.floor(rating)).fill('⭐️')}
       </p>
-      <img src={image_url} style={{ width: '5rem' }} />
+      <img src={image_url} style={{ width: '20rem' }} />
     </>
   );
 };
