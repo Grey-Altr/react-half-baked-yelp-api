@@ -9,12 +9,12 @@ const handler = async (event) => {
 
   try {
     const resp = await fetch(
-      `https://api.yelp.com/v3/businesses/search?location=${zip}&term=${search}`
+      `https://api.yelp.com/v3/businesses/search?location=${zip}&term=${search}`,
       {
         headers: {
-        Authorization: `Bearer ${process.env.YELP_API_KEY}`,
-      },
-    }
+          Authorization: `Bearer ${process.env.YELP_API_KEY}`,
+        },
+      }
     );
     const data = await resp.json();
     const json = JSON.stringify(data.businesses);
